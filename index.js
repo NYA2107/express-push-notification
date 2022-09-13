@@ -28,12 +28,13 @@ app.post('/save-subscription', async (req, res) => {
 // web push config section
 
 const vapidKeys = {
+  subject:'mailto: <imamnajibulloh.in@gmail.com>',
   publicKey:'BMDLwT2U28PsQyZI30drgpA_0t-RU_XQjlr34vE9GDMfvqHHwl6ZhJPr9SNiuMFezbeJcQHdAInZlizJj7mjaqM',
   privateKey:'XvPseqmSBI1IjGL-ubstCC4-BI6884GfkjEAQ68CFxc'
 }
 
 webpush.setVapidDetails(
-  'mailto:imamnajibulloh.in@gmail.com', 
+  vapidKeys.subject, 
   vapidKeys.publicKey, 
   vapidKeys.privateKey
 )
