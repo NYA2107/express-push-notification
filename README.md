@@ -4,7 +4,7 @@ API LIST :
 
 POST /save-subscription 
 body = subscription object from FE
-see the usage here : https://github.com/NYA2107/frontend-push-notification
+-- see the usage here : https://github.com/NYA2107/frontend-push-notification
 
 GET /send-notification?msg=[your_custom_message]
 
