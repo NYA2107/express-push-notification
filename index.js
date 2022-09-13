@@ -13,10 +13,10 @@ app.get('/', (req, res) => {
 })
 
 // Save Subscription Section
-const dummyDb = {subscribtion: null}
+const dummyDb = {subscription: null}
 
-const saveToDatabase = async (subscribtion) =>{
-  dummyDb.subscribtion = subscribtion
+const saveToDatabase = async (subscription) =>{
+  dummyDb.subscription = subscription
 }
 
 app.post('/save-subscription', async (req, res) => {
@@ -44,9 +44,9 @@ const sendNotification = (subscription, dataToSend) => {
 }
 
 app.get('/send-notification', (req, res) => {
-  const subscribtion = dummyDb.subscribtion
+  const subscription = dummyDb.subscription
   const message = req.query.msg
-  sendNotification(subscribtion, message)
+  sendNotification(subscription, message)
   res.json({ message: 'message sent' })
 })
 
